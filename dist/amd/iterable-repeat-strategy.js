@@ -45,7 +45,7 @@ define(['exports', 'aurelia-templating-resources/repeat-utilities'], function (e
             var key = _step$value[0];
             var value = _step$value[1];
 
-            var overrideContext = (0, _aureliaTemplatingResourcesRepeatUtilities.createFullOverrideContext)(repeat, value, index, undefined, key);
+            var overrideContext = (0, _aureliaTemplatingResourcesRepeatUtilities.createFullOverrideContext)(repeat, value, index, Object.keys(items).length, key);
             var view = repeat.viewFactory.create();
             view.bind(overrideContext.bindingContext, overrideContext);
             repeat.viewSlot.add(view);

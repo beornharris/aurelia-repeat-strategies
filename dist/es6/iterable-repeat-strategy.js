@@ -13,7 +13,7 @@ export class IteratorStrategy {
   _standardProcessItems(repeat, items) {
     let index = 0;
     for(let [key, value] of items) {
-      let overrideContext = createFullOverrideContext(repeat, value, index, undefined, key);
+      let overrideContext = createFullOverrideContext(repeat, value, index, Object.keys(items).length, key);
       let view = repeat.viewFactory.create();
       view.bind(overrideContext.bindingContext, overrideContext);
       repeat.viewSlot.add(view);

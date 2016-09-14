@@ -18,8 +18,10 @@ define(["exports"], function (exports) {
 
         _createClass(IterableValueConverter, [{
             key: "toView",
-            value: function toView(value) {
+            value: function toView() {
                 var _ref;
+
+                var value = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
 
                 var index = 0;
                 var propKeys = Reflect.ownKeys(value);

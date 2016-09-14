@@ -48,7 +48,7 @@ System.register(['aurelia-templating-resources/repeat-utilities'], function (_ex
                 var key = _step$value[0];
                 var value = _step$value[1];
 
-                var overrideContext = createFullOverrideContext(repeat, value, index, undefined, key);
+                var overrideContext = createFullOverrideContext(repeat, value, index, Object.keys(items).length, key);
                 var view = repeat.viewFactory.create();
                 view.bind(overrideContext.bindingContext, overrideContext);
                 repeat.viewSlot.add(view);
